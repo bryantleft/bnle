@@ -1,4 +1,2 @@
-.astro
-.idea
-dist
+.turbo
 node_modules
