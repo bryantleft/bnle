@@ -1,0 +1,7 @@
+.idea
+.react-router
+.vite
+.vercel
+node_modules
+build/
+.env*
