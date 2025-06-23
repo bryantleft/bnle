@@ -1,3 +1,0 @@
-# macro
-
-bryant le macro

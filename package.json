@@ -4,11 +4,7 @@
 	"scripts": {
 		"build": "turbo run build",
 		"dev:portfolio": "turbo run dev --filter=portfolio",
-		"dev:snip": "turbo run dev --filter=snip",
-		"dev:macro": "turbo run dev --filter=macro",
-		"check:portfolio": "turbo run check --filter=portfolio",
-		"check:snip": "turbo run check --filter=snip",
-		"check:macro": "turbo run check --filter=macro"
+		"check:portfolio": "turbo run check --filter=portfolio"
 	},
 	"devDependencies": {
 		"turbo": "2.5.3"
