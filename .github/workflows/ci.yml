@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        project-filter: [portfolio, snip, macro]
+        project-filter: [portfolio]
 
     steps:
       - name: Checkout repository
