@@ -14,26 +14,26 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   <div id="home" class="h-full animate-fade-in opacity-0">
     <div class="flex flex-col h-full justify-center">
       <div class="flex justify-center items-center h-full">
-        <span class="text-lg text-center text-platinum py-1 px-2 mb-4 font-semibold">Bryant Le</span>
+        <span class="text-h2 text-center text-lychee-50 py-1 px-2 mb-4 font-semibold">Bryant Le</span>
       </div>
       <div class="flex flex-col mx-auto justify-center items-start h-full gap-y-4">
-          <span class="text-sm text-center text-platinum-400 py-1 px-2">
+          <span class="text-body-sm text-center text-lychee-300 py-1 px-2">
             &gt; building
-            <a href="https://openyap.com" class="text-platinum-600 hover:text-platinum-500 underline">openyap.com</a>,
-            <a href="https://resumes.fyi" class="text-platinum-600 hover:text-platinum-500 underline">resumes.fyi</a>,
-            <a href="https://bruhs.ai" class="text-platinum-600 hover:text-platinum-500 underline">bruhs.ai</a>
+            <a href="https://openyap.com" class="text-blueberry-400 hover:text-blueberry-300 underline">openyap.com</a>,
+            <a href="https://resumes.fyi" class="text-guava-400 hover:text-guava-300 underline">resumes.fyi</a>,
+            <a href="https://bruhs.ai" class="text-persimmon-400 hover:text-persimmon-300 underline">bruhs.ai</a>
           </span>
       </div>
     </div>
 
     <div class="fixed bottom-4 right-4 flex gap-x-2">
-        <a href="https://github.com/bnleft" class="bg-platinum-200 hover:bg-platinum-300 p-1">
+        <a href="https://github.com/bnleft" class="bg-lychee-200 hover:bg-lychee-300 p-1 rounded transition-colors">
             <Image src={github} alt="github logo" width={24} height={24} loading="eager"/>
         </a>
-        <a href="https://www.linkedin.com/in/bnle" class="bg-platinum-200 hover:bg-platinum-300 p-1">
+        <a href="https://www.linkedin.com/in/bnle" class="bg-lychee-200 hover:bg-lychee-300 p-1 rounded transition-colors">
             <Image src={linkedin} alt="linkedin logo" width={24} height={24} loading="eager"/>
         </a>
-        <a href="https://x.com/bnleft" class="bg-platinum-200 hover:bg-platinum-300 p-1">
+        <a href="https://x.com/bnleft" class="bg-lychee-200 hover:bg-lychee-300 p-1 rounded transition-colors">
             <Image src={x} alt="x logo" width={24} height={24} loading="eager"/>
         </a>
     </div>
@@ -45,6 +45,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     const mainContent = document.getElementById('home');
     const links = document.querySelectorAll('a');
 
+    if (!mainContent) return;
+
     // Initial fade in
     setTimeout(() => {
       mainContent.style.transition = 'opacity 1s ease-in-out';
@@ -55,6 +57,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       link.addEventListener('click', async (e) => {
         e.preventDefault();
         const href = link.getAttribute('href');
+
+        if (!href) return;
 
         mainContent.style.opacity = '0';
 
